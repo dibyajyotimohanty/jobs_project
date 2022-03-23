@@ -1,0 +1,28 @@
+body{
+ background:url('https://www.teahub.io/photos/full/13-137126_1920x1152-free-download-nature-hd-wallpapers-nature-nature.jpg');
+ background-repeat : no-repeat;
+ background-size : cover;
+}
+.container {
+   margin-top :100px;
+   background : red;
+}
+.jumbotron{
+
+   background: yellow;
+}
+h1{
+  color : yellow;
+  text-align : center;
+}
+td,table{
+    margin:auto;
+    border:2px solid red;
+    color :red;
+    background:yellow;
+    font-size :15px;
+}
+thead{
+    background:green;
+
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index page!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/demo.css' %}">
+</head>
+<body>
+ <h1>Hydrabad Job Updates</h1>
+<div class="container" align="center">
+    <img src="{% static 'images/hyd1.jpg' %}" alt="">
+     <img src="{% static 'images/hyd2.jpg' %}" alt="">
+     <img src="{% static 'images/hyd3.jpg' %}" alt="">
+    {% if jobs_list %}
+    <table>
+        <thead>
+          <th>Date</th>
+          <th>Company</th>
+          <th>Title</th>
+          <th>Eligibility</th>
+          <th>Address</th>
+          <th>Email</th>
+          <th>PhoneNumber</th>
+          </thead>
+        {% for jobs in jobs_list %}
+        <tr>
+            <td>{{jobs.Date}}</td>
+            <td>{{jobs.Company}}</td>
+            <td>{{jobs.Title}}</td>
+            <td>{{jobs.Eligibility}}</td>
+            <td>{{jobs.Address}}</td>
+            <td>{{jobs.Email}}</td>
+            <td>{{jobs.Phonenumber}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+     <p>No Jobs Found..!</p>
+{% endif %}
+</div>
+
+</body>
+</html>
